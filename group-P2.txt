@@ -97,9 +97,16 @@ CREATE TABLE Pub_Playlist (
         ON DELETE CASCADE
 );
 
-CREATE TABLE Follows (
+CREATE TABLE follow_u (
     followerUid INTEGER,
     followeeUid INTEGER,
     FOREGIN KEY (followerUid) REFERENCES Users,
     FOREGIN KEY (followeeUid) REFERENCES Users
+);
+
+CREATE TABLE follow_a (
+    uid INTEGER,
+    aid INTEGER,
+    FOREGIN KEY (uid) REFERENCES Users,
+    FOREGIN KEY (aid) REFERENCES Artists
 );
