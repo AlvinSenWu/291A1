@@ -59,3 +59,13 @@ CREATE TABLE Sessions (
     PRIMARY KEY (uid, sno),
     FOREIGN KEY (uid) REFERENCES Users
 );
+
+CREATE TABLE Played (
+    sno INTEGER,
+    uid INTEGER,
+    sid INTEGER,
+    cnt INTEGER
+    PRIMARY KEY (sno, uid, sid),
+    FOREIGN KEY (sno) REFERENCES Songs,
+    FOREIGN KEY (sno, uid) REFERENCES Sessions
+);
