@@ -50,3 +50,12 @@ CREATE TABLE Pl_Include (
     FOREIGN KEY (plid) REFERENCES Playlists,
     FOREIGN KEY (sid) REFERENCES Songs
 );
+
+CREATE TABLE Sessions (
+    sno INTEGER,
+    sstart DATE,
+    send DATE,
+    sesOf uid,
+    PRIMARY KEY (uid, sno),
+    FOREIGN KEY (uid) REFERENCES Users
+);
