@@ -1,0 +1,4 @@
+aswu commenting on tonkich:
+    ER diagrams are generally the same, with missing of arrows for some relationships
+    and determining relationship constraint types which I've discussed with Kevin and fixed for his diagram, 
+    and the missing of a bot attribute collect_disseminate. Overall, very similar and consistent with my own.
