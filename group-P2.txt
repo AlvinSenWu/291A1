@@ -42,6 +42,12 @@ CREATE TABLE Playlists (
     FOREIGN KEY (uid) REFERENCES Users
 );
 
+CREATE TABLE Pub_Playlist (
+    plid INTEGER,
+    FOREIGN (plid) REFERENCES Playlists
+        ON DELETE CASCADE
+);
+
 CREATE TABLE Pl_Include (
     plid INTEGER,
     sid INTEGER,
@@ -70,31 +76,25 @@ CREATE TABLE Played (
     FOREIGN KEY (sno, uid) REFERENCES Sessions
 );
 
-CREATE TABLE Us_like (
+CREATE TABLE us_like (
     sid INTEGER,
     uid INTEGER,
     FOREIGN KEY (uid) REFERENCES Users,
     FOREIGN KEY (sid) REFERENCES Songs
 );
 
-CREATE TABLE Ua_like (
+CREATE TABLE ua_like (
     albid INTEGER,
     uid INTEGER,
     FOREIGN KEY (uid) REFERENCES Users,
     FOREIGN KEY (albid) REFERENCES Albums
 );
 
-CREATE TABLE Up_like (
+CREATE TABLE up_like (
     plid INTEGER,
     uid INTEGER,
     FOREIGN KEY (uid) REFERENCES Users,
     FOREIGN KEY (plid) REFERENCES Pub_Playlists
-);
-
-CREATE TABLE Pub_Playlist (
-    plid INTEGER,
-    FOREIGN (plid) REFERENCES Playlists
-        ON DELETE CASCADE
 );
 
 CREATE TABLE follow_u (
