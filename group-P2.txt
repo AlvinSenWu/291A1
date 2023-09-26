@@ -69,3 +69,24 @@ CREATE TABLE Played (
     FOREIGN KEY (sno) REFERENCES Songs,
     FOREIGN KEY (sno, uid) REFERENCES Sessions
 );
+
+CREATE TABLE Us_like (
+    sid INTEGER,
+    uid INTEGER,
+    FOREIGN KEY (uid) REFERENCES Users,
+    FOREIGN KEY (sid) REFERENCES Songs
+);
+
+CREATE TABLE Ua_like (
+    albid INTEGER,
+    uid INTEGER,
+    FOREIGN KEY (uid) REFERENCES Users,
+    FOREIGN KEY (albid) REFERENCES Albums
+);
+
+CREATE TABLE Up_like (
+    plid INTEGER,
+    uid INTEGER,
+    FOREIGN KEY (uid) REFERENCES Users,
+    FOREIGN KEY (plid) REFERENCES Pub_Playlists
+);
