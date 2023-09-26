@@ -3,3 +3,7 @@ aswu commenting on tonkich:
     and determining relationship constraint types which I've discussed with Kevin and fixed for his diagram, 
     and the missing of a bot attribute collect_disseminate, which I realized after as well is missing and written in the group ER.
     Overall, very similar and consistent with my own.
+
+tonkich commenting on aswu:
+    similar to my own diagram, but missing extra relationship from List to User to include users. Only had one relationship to indicate owner, but not 
+    to indicate the users within list. Also discussed minor changes with Alvin privately about certain relationship constraints like between FavouriteList and        creator relationship. Also I don't think the "list_id" attribute is necessary for the FavouriteList entity.
