@@ -28,7 +28,7 @@ CREATE TABLE Albums (
 CREATE TABLE Al_Include (
     albid INTEGER,
     sid INTEGER,
-    order INTEGER
+    order INTEGER,
     PRIMARY KEY (albid, sid),
     FOREIGN KEY (albid) REFERENCES Albums,
     FOREIGN KEY (sid) REFERENCES Songs
