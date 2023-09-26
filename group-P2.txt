@@ -8,7 +8,7 @@ CREATE TABLE Artists (
     aid INTEGER,
     name CHAR(20),
     PRIMARY KEY (aid)
-)
+);
 
 CREATE TABLE Songs (
     sid INTEGER,
