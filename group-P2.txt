@@ -66,7 +66,7 @@ CREATE TABLE Played (
     sid INTEGER,
     cnt INTEGER,
     PRIMARY KEY (sno, uid, sid),
-    FOREIGN KEY (sno) REFERENCES Songs,
+    FOREIGN KEY (sid) REFERENCES Songs,
     FOREIGN KEY (sno, uid) REFERENCES Sessions
 );
 
