@@ -14,3 +14,7 @@ afair1 commenting on ggrahamb:
     However, there were things that we shared that should be changed: 1) missing the bot attribution of collectiong
     and deseminating content, and 2) the text on the connections for the follow relationship of 'followee' and 'follower'.
     In total, consistent with my mine.
+
+ggrahamb commenting on afair1:
+    The ER diagram closely resembles the P1 group submission and my own, but there's a missing attribute for collecting content for the "bot" entity. 
+    Additionally, the two recursive relationships, "follow" and "reply_to" are missing role indicators such as "followee", "follower", "replyer", and "replyee". 
