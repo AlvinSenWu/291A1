@@ -1,0 +1,52 @@
+CREATE TABLE Users (
+    uid CHAR(12),
+    name CHAR(20),
+    PRIMARY KEY (uid)
+);
+
+CREATE TABLE Artists (
+    aid CHAR(12),
+    name CHAR(20),
+    PRIMARY KEY (aid)
+)
+
+CREATE TABLE Songs (
+    sid CHAR(12),
+    title CHAR(20),
+    duration INTEGER,
+    aid CHAR(12),
+    PRIMARY KEY (sid),
+    FOREIGN KEY (aid) REFERENCES Artists
+);
+
+CREATE TABLE Albums (
+    albid CHAR(12),
+    title CHAR(20),
+    PRIMARY KEY (albid)
+);
+
+CREATE TABLE Al_Include (
+    albid CHAR(12),
+    sid CHAR (12),
+    order INTEGER
+    PRIMARY KEY (albid, sid),
+    FOREIGN KEY (albid) REFERENCES Albums,
+    FOREIGN KEY (sid) REFERENCES Songs
+);
+
+CREATE TABLE Playlists (
+    plid CHAR(12),
+    title CHAR(20),
+    uid CHAR(12),
+    PRIMARY KEY (plid),
+    FOREIGN KEY (uid) REFERENCES Users
+);
+
+CREATE TABLE Pl_Include (
+    plid CHAR(12),
+    sid CHAR(12),
+    order INTEGER
+    PRIMARY KEY (plid, sid),
+    FOREIGN KEY (plid) REFERENCES Playlists,
+    FOREIGN KEY (sid) REFERENCES Songs
+);
