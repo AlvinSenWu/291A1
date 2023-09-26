@@ -1,33 +1,33 @@
 CREATE TABLE Users (
-    uid CHAR(12),
+    uid INTEGER,
     name CHAR(20),
     PRIMARY KEY (uid)
 );
 
 CREATE TABLE Artists (
-    aid CHAR(12),
+    aid INTEGER,
     name CHAR(20),
     PRIMARY KEY (aid)
 )
 
 CREATE TABLE Songs (
-    sid CHAR(12),
+    sid INTEGER,
     title CHAR(20),
     duration INTEGER,
-    aid CHAR(12),
+    albid INTEGER,
     PRIMARY KEY (sid),
     FOREIGN KEY (aid) REFERENCES Artists
 );
 
 CREATE TABLE Albums (
-    albid CHAR(12),
+    albid INTEGER,
     title CHAR(20),
     PRIMARY KEY (albid)
 );
 
 CREATE TABLE Al_Include (
-    albid CHAR(12),
-    sid CHAR (12),
+    albid INTEGER,
+    sid INTEGER,
     order INTEGER
     PRIMARY KEY (albid, sid),
     FOREIGN KEY (albid) REFERENCES Albums,
@@ -35,16 +35,16 @@ CREATE TABLE Al_Include (
 );
 
 CREATE TABLE Playlists (
-    plid CHAR(12),
+    plid INTEGER,
     title CHAR(20),
-    uid CHAR(12),
+    uid INTEGER,
     PRIMARY KEY (plid),
     FOREIGN KEY (uid) REFERENCES Users
 );
 
 CREATE TABLE Pl_Include (
-    plid CHAR(12),
-    sid CHAR(12),
+    plid INTEGER,
+    sid INTEGER,
     order INTEGER
     PRIMARY KEY (plid, sid),
     FOREIGN KEY (plid) REFERENCES Playlists,
@@ -64,7 +64,7 @@ CREATE TABLE Played (
     sno INTEGER,
     uid INTEGER,
     sid INTEGER,
-    cnt INTEGER
+    cnt INTEGER,
     PRIMARY KEY (sno, uid, sid),
     FOREIGN KEY (sno) REFERENCES Songs,
     FOREIGN KEY (sno, uid) REFERENCES Sessions
