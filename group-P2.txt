@@ -14,7 +14,7 @@ CREATE TABLE Songs (
     sid INTEGER,
     title CHAR(20),
     duration INTEGER,
-    albid INTEGER,
+    aid INTEGER,
     PRIMARY KEY (sid),
     FOREIGN KEY (aid) REFERENCES Artists
 );
