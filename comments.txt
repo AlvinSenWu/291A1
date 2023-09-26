@@ -18,3 +18,4 @@ afair1 commenting on ggrahamb:
 ggrahamb commenting on afair1:
     The ER diagram closely resembles the P1 group submission and my own, but there's a missing attribute for collecting content for the "bot" entity. 
     Additionally, the two recursive relationships, "follow" and "reply_to" are missing role indicators such as "followee", "follower", "replyer", and "replyee". 
+    The diagram is similar and consistent with my own. 
